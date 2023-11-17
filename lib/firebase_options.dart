@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDzvK0diPw7AIvzQKUBVmq14XXMU3fpiWk',
-    appId: '1:639858200492:web:2459e543dd5fe05afbf409',
-    messagingSenderId: '639858200492',
-    projectId: 'iot-devicesensor',
-    authDomain: 'iot-devicesensor.firebaseapp.com',
-    storageBucket: 'iot-devicesensor.appspot.com',
-    measurementId: 'G-04W7FSN8DP',
+    apiKey: 'AIzaSyBDZqOau_-wsZEaj_9baol6hPMjFqjOhTA',
+    appId: '1:784055183778:web:be7c055303984d6b71eafb',
+    messagingSenderId: '784055183778',
+    projectId: 'iot-mobilesensros-research',
+    authDomain: 'iot-mobilesensros-research.firebaseapp.com',
+    storageBucket: 'iot-mobilesensros-research.appspot.com',
+    measurementId: 'G-LQSD7H981P',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAFVTPVAEwrYrB2Y0eSlsHWn8kBIbVKbds',
-    appId: '1:639858200492:android:6ca6526a33dae3cbfbf409',
-    messagingSenderId: '639858200492',
-    projectId: 'iot-devicesensor',
-    storageBucket: 'iot-devicesensor.appspot.com',
+    apiKey: 'AIzaSyA4cjVSBz6_Vx9c2oeVpUpl7CNbzpu8Dao',
+    appId: '1:784055183778:android:dccd64c120c335f371eafb',
+    messagingSenderId: '784055183778',
+    projectId: 'iot-mobilesensros-research',
+    storageBucket: 'iot-mobilesensros-research.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBFti_i6ibtvBS3BmXGqEmoRQ2YyV7bOrc',
-    appId: '1:639858200492:ios:2bd38aa9195369cefbf409',
-    messagingSenderId: '639858200492',
-    projectId: 'iot-devicesensor',
-    storageBucket: 'iot-devicesensor.appspot.com',
+    apiKey: 'AIzaSyD6zFNHBhSo4pMAY0pwdYVxTRkJQpk3TQk',
+    appId: '1:784055183778:ios:27e501a452d4a00b71eafb',
+    messagingSenderId: '784055183778',
+    projectId: 'iot-mobilesensros-research',
+    storageBucket: 'iot-mobilesensros-research.appspot.com',
     iosBundleId: 'com.example.mobileSensors',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBFti_i6ibtvBS3BmXGqEmoRQ2YyV7bOrc',
-    appId: '1:639858200492:ios:dc416302d1cd39c2fbf409',
-    messagingSenderId: '639858200492',
-    projectId: 'iot-devicesensor',
-    storageBucket: 'iot-devicesensor.appspot.com',
+    apiKey: 'AIzaSyD6zFNHBhSo4pMAY0pwdYVxTRkJQpk3TQk',
+    appId: '1:784055183778:ios:f65b7f5d2aff42bf71eafb',
+    messagingSenderId: '784055183778',
+    projectId: 'iot-mobilesensros-research',
+    storageBucket: 'iot-mobilesensros-research.appspot.com',
     iosBundleId: 'com.example.mobileSensors.RunnerTests',
   );
 }

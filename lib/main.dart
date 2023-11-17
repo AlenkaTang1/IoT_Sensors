@@ -3,8 +3,21 @@ import 'dart:async';
 import 'package:light/light.dart';
 //import 'package:proximity_sensor/proximity_sensor.dart';
 import 'package:sensors_plus/sensors_plus.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'sensorCollection.dart';
 
-void main() => runApp(MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MaterialApp(title: 'Mobile Sensors', initialRoute: '/', routes: {
+    '/': (context) => MyApp(),
+    // When navigating to the "/second" route, build the SecondScreen widget.
+    '/start_collection': (context) => const CollectionPage(),
+  }));
+}
 
 class MyApp extends StatefulWidget {
   @override
@@ -125,6 +138,13 @@ class _MyAppState extends State<MyApp> {
                 const SizedBox(height: 20),
                 Text('Lux value: $_luxString\n'),
                 const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/start_collection');
+                  },
+                  child: const Text('Start Collection'),
+                ),
+
                 //Text('proximity distance: $_proximityDistance\n'),
               ],
             )
