@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "639858200492",
+    "project_id": "iot-devicesensor",
+    "storage_bucket": "iot-devicesensor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639858200492:android:21be3510e304d3dafbf409",
+        "android_client_info": {
+          "package_name": "com.example.devicesensors"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFVTPVAEwrYrB2Y0eSlsHWn8kBIbVKbds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639858200492:android:6ca6526a33dae3cbfbf409",
+        "android_client_info": {
+          "package_name": "com.example.mobile_sensors"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFVTPVAEwrYrB2Y0eSlsHWn8kBIbVKbds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
