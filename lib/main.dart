@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:light/light.dart';
@@ -27,6 +28,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   //bool _isDisplayingdata = false;
   //int _proximityDistance = 0;
+  var accelerometerData =
+      FirebaseFirestore.instance.collection('AccelerometerData');
+  var gyroscopeData = FirebaseFirestore.instance.collection('GyroscopeData');
+  var magnetometerData =
+      FirebaseFirestore.instance.collection('MagnetometerData');
   String _luxString = 'Unknown';
   Light? _light;
   late StreamSubscription<dynamic> _streamSubscriptionProximity;
@@ -86,6 +92,21 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> startSensorDataCollection() async {
+    accelerometerData.add({
+      "X": '$_accelerometerX',
+      "Y": '$_accelerometerY',
+      "Z": '$_accelerometerZ'
+    });
+    gyroscopeData
+        .add({"X": '$_gyroscopeX', "Y": '$_gyroscopeY', "Z": '$_gyroscopeZ'});
+    magnetometerData.add({
+      "X": '$_magnetometerX',
+      "Y": '$_magnetometerY',
+      "Z": '$_magnetometerZ'
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -140,9 +161,9 @@ class _MyAppState extends State<MyApp> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/start_collection');
+                    startSensorDataCollection();
                   },
-                  child: const Text('Start Collection'),
+                  child: const Text('Collection Page'),
                 ),
 
                 //Text('proximity distance: $_proximityDistance\n'),

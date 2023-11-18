@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
 
   firebase_core: ^2.17.0
-  firebase_database: ^10.2.7  # Use this for Realtime Database
+  firebase_database: ^10.3.4  # Use this for Realtime Database
   # OR
   cloud_firestore: ^4.9.3  # Use this for Firestore
   path_provider: ^2.1.1
