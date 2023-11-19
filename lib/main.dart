@@ -28,6 +28,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   //bool _isDisplayingdata = false;
   //int _proximityDistance = 0;
+  Duration oneSec = const Duration(seconds: 1);
+  var now = DateTime.now();
+
   var accelerometerData =
       FirebaseFirestore.instance.collection('AccelerometerData');
   var gyroscopeData = FirebaseFirestore.instance.collection('GyroscopeData');
@@ -92,15 +95,27 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> ff() async {
+    Timer.periodic(oneSec, (Timer timer) {
+      startSensorDataCollection();
+    });
+  }
+
   Future<void> startSensorDataCollection() async {
     accelerometerData.add({
+      "time": '$now',
       "X": '$_accelerometerX',
       "Y": '$_accelerometerY',
       "Z": '$_accelerometerZ'
     });
-    gyroscopeData
-        .add({"X": '$_gyroscopeX', "Y": '$_gyroscopeY', "Z": '$_gyroscopeZ'});
+    gyroscopeData.add({
+      "time": '$now',
+      "X": '$_gyroscopeX',
+      "Y": '$_gyroscopeY',
+      "Z": '$_gyroscopeZ'
+    });
     magnetometerData.add({
+      "time": '$now',
       "X": '$_magnetometerX',
       "Y": '$_magnetometerY',
       "Z": '$_magnetometerZ'
@@ -161,9 +176,9 @@ class _MyAppState extends State<MyApp> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    startSensorDataCollection();
+                    ff();
                   },
-                  child: const Text('Collection Page'),
+                  child: const Text('Collect'),
                 ),
 
                 //Text('proximity distance: $_proximityDistance\n'),
