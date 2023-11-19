@@ -1,16 +1,7 @@
 # mobile_sensors
 
-A new Flutter project.
+Research project on user behavior prediction based on sensor data collected in the background.
 
-## Getting Started
+## Background and Motivation
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Coming from a security point of view, a lot of sensor that are active in the mobile devices does not need user permission to access data and the purpose of this research project is to take a few sensors as a small sample running in the background while the user uses their mobile devices like normal to see how much data can be collected and we could later on find a way to protect the user's privacy. 
